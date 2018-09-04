@@ -11,3 +11,5 @@ scikit-image
 seaborn
 h5py
 ipykernel
+bokeh
+pickleshare
