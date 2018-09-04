@@ -113,7 +113,9 @@ pip install -r requirements.txt
 
 7. That's it!
 
-Now all of the `deep-learning` libraries are available to you. Assuming you're environment is still activated, you can navigate to the Exercises repo and start looking at the notebooks:
+Now most of the `deep-learning` libraries are available to you. Very occasionally, you will see a repository with an addition requirements file, which exists should you want to use TensorFlow and Keras, for example. In this case, you're encouraged to install another library to your existing environment, or create a new environment for a specific project. 
+
+Noe, assuming your `deep-learning` environment is still activated, you can navigate to the main repo and start looking at the notebooks:
 
 ```
 cd
