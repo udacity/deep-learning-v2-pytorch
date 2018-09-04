@@ -102,7 +102,7 @@ cd deep-learning-v2-pytorch
 	```
 	- __Windows__: 
 	```
-	conda install pytorch-cpu -c pytorch
+	conda install pytorch -c pytorch
 	pip install torchvision
 	```
 
