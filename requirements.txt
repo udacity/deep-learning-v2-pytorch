@@ -5,3 +5,7 @@ pandas
 numpy
 pillow
 scipy
+tqdm
+scikit-learn
+scikit-image
+seaborn
