@@ -1,0 +1,80 @@
+name: dlnd-tf-lab
+channels: !!python/tuple
+- defaults
+dependencies:
+- bleach=1.5.0=py35_0
+- bzip2=1.0.6=vc14_3
+- colorama=0.3.7=py35_0
+- cycler=0.10.0=py35_0
+- decorator=4.0.11=py35_0
+- entrypoints=0.2.2=py35_1
+- freetype=2.5.5=vc14_2
+- html5lib=0.999=py35_0
+- icu=57.1=vc14_0
+- ipykernel=4.5.2=py35_0
+- ipython=5.2.2=py35_0
+- ipython_genutils=0.1.0=py35_0
+- ipywidgets=5.2.2=py35_1
+- jinja2=2.9.4=py35_0
+- jpeg=9b=vc14_0
+- jsonschema=2.5.1=py35_0
+- jupyter=1.0.0=py35_3
+- jupyter_client=4.4.0=py35_0
+- jupyter_console=5.0.0=py35_0
+- jupyter_core=4.3.0=py35_0
+- libpng=1.6.27=vc14_0
+- libtiff=4.0.6=vc14_3
+- markupsafe=0.23=py35_2
+- matplotlib=2.0.0=np112py35_0
+- mistune=0.7.3=py35_0
+- mkl=2017.0.1=0
+- nbconvert=5.1.1=py35_0
+- nbformat=4.2.0=py35_0
+- notebook=4.3.1=py35_1
+- numpy=1.12.0=py35_0
+- olefile=0.44=py35_0
+- openssl=1.0.2k=vc14_0
+- pandas=0.19.2=np112py35_1
+- pandocfilters=1.4.1=py35_0
+- path.py=10.1=py35_0
+- pickleshare=0.7.4=py35_0
+- pillow=4.0.0=py35_1
+- pip=9.0.1=py35_1
+- prompt_toolkit=1.0.9=py35_0
+- pygments=2.1.3=py35_0
+- pyparsing=2.1.4=py35_0
+- pyqt=5.6.0=py35_2
+- python=3.5.2=0
+- python-dateutil=2.6.0=py35_0
+- pytz=2016.10=py35_0
+- pyzmq=16.0.2=py35_0
+- qt=5.6.2=vc14_3
+- qtconsole=4.2.1=py35_2
+- scikit-learn=0.18.1=np112py35_1
+- scipy=0.18.1=np112py35_1
+- setuptools=27.2.0=py35_1
+- simplegeneric=0.8.1=py35_1
+- sip=4.18=py35_0
+- six=1.10.0=py35_0
+- testpath=0.3=py35_0
+- tk=8.5.18=vc14_0
+- tornado=4.4.2=py35_0
+- traitlets=4.3.1=py35_0
+- vs2015_runtime=14.0.25123=0
+- wcwidth=0.1.7=py35_0
+- wheel=0.29.0=py35_0
+- widgetsnbextension=1.2.6=py35_0
+- win_unicode_console=0.5=py35_0
+- zlib=1.2.8=vc14_3
+- pip:
+  - ipython-genutils==0.1.0
+  - jupyter-client==4.4.0
+  - jupyter-console==5.0.0
+  - jupyter-core==4.3.0
+  - prompt-toolkit==1.0.9
+  - protobuf==3.2.0
+  - tensorflow==1.0.0
+  - tqdm==4.11.2
+  - win-unicode-console==0.5
+prefix: C:\Users\Mat\Anaconda3\envs\dlnd-tf-lab
+
