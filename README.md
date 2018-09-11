@@ -10,7 +10,7 @@ There are also notebooks used as projects for the Nanodegree program. In the pro
 
 * [Introduction to Neural Networks](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/intro-neural-networks): Learn how to implement gradient descent and apply it to predicting patterns in student admissions data.
 * [Sentiment Analysis with NumPy](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/sentiment-analysis-network): [Andrew Trask](http://iamtrask.github.io/) leads you through building a sentiment analysis model, predicting if some text is positive or negative.
-* This repo is in devleopment (as of 9/10) and there are many more tutorials to come!
+* **This repo is in development (as of 9/10) and there are many more tutorials to come!**
 
 
 ### Projects
@@ -21,7 +21,7 @@ There are also notebooks used as projects for the Nanodegree program. In the pro
 
 ### Elective Material
 
-* [Intro to TensorFlow](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/intro-to-tensorflow): Starting building neural networks with Tensorflow.
+* [Intro to TensorFlow](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/tensorflow/intro-to-tensorflow): Starting building neural networks with Tensorflow.
 * More to come
 
 ---
