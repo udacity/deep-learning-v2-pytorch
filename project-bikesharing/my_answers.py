@@ -66,16 +66,10 @@ class NeuralNetwork(object):
         # TODO: Hidden layer - Replace these values with your calculations.
         hidden_inputs = X @ self.weights_input_to_hidden  # signals into hidden layer
         hidden_outputs = self.activation_function(hidden_inputs) # signals from hidden layer
-        print(X)
-        print(self.weights_input_to_hidden)
-        print('=', hidden_inputs)
 
         # TODO: Output layer - Replace these values with your calculations.
         final_inputs = hidden_outputs @ self.weights_hidden_to_output # signals into final output layer
         final_outputs = final_inputs # signals from final output layer
-        print(hidden_outputs)
-        print(self.weights_hidden_to_output)
-        print('=', final_inputs)
 
         return final_outputs, hidden_outputs
 
@@ -92,13 +86,6 @@ class NeuralNetwork(object):
         '''
         #### Implement the backward pass here ####
         ### Backward pass ###
-
-        print('y', y)
-        print('final_outputs', final_outputs)
-        print('hidden_outputs', hidden_outputs)
-        print('input_weights', self.weights_input_to_hidden)
-        print('output_weights', self.weights_hidden_to_output)
-        print('X', X)
 
         # TODO: Output error - Replace this value with your calculations.
         error = y - final_outputs # Output layer error is the difference between desired target and actual output.
