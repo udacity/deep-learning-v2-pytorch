@@ -13496,7 +13496,7 @@ Test Accuracy: 70% (591/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Write your algorithm.</span>
@@ -13506,8 +13506,10 @@ Test Accuracy: 70% (591/836)
     <span class="c1">## handle cases for a human face, dog, and neither</span>
     <span class="k">if</span> <span class="n">face_detector</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello human!&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dog_detector</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
+    <span class="k">elif</span> <span class="n">dog_detector</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woff dog!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is anybody there?&quot;</span><span class="p">)</span>    
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13540,14 +13542,20 @@ Test Accuracy: 70% (591/836)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> (Three possible points for improvement)</p>
+<p><strong>Answer:</strong> This was pretty good. 
+Improvements:</p>
+<ul>
+<li>Train longer: I think both the transfer learning and the learning from scratch could achieve better accuracy by training longer.</li>
+<li>If I had more time I would like to investigate further how the gradients of my model from scratch is looking to see if the updates are as efficient as possible.</li>
+<li>I should also do mixed breed classifications.</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## TODO: Execute your algorithm from Step 6 on</span>
@@ -13604,7 +13612,7 @@ Test Accuracy: 70% (591/836)
 <pre>You look like a ...
 Dachshund
 But when I look closer ...
-You look more like a  Great dane
+You look more like a  Curly-coated retriever
 
 Hello human!
 </pre>
@@ -13635,8 +13643,9 @@ Hello human!
 <pre>You look like a ...
 Bloodhound
 But when I look closer ...
-You look more like a  Bull terrier
+You look more like a  Labrador retriever
 
+Is anybody there?
 </pre>
 </div>
 </div>
@@ -13665,7 +13674,7 @@ You look more like a  Bull terrier
 <pre>You look like a ...
 Chihuahua
 But when I look closer ...
-You look more like a  Chihuahua
+You look more like a  Dogue de bordeaux
 
 Hello human!
 </pre>
@@ -13696,8 +13705,9 @@ Hello human!
 <pre>You look like a ...
 Bull terrier
 But when I look closer ...
-You look more like a  Dachshund
+You look more like a  Nova scotia duck tolling retriever
 
+Is anybody there?
 </pre>
 </div>
 </div>
@@ -13757,7 +13767,7 @@ Hello human!
 <pre>You look like a ...
 Labrador retriever
 But when I look closer ...
-You look more like a  Lakeland terrier
+You look more like a  Poodle
 
 Hello human!
 </pre>
@@ -13788,7 +13798,7 @@ Hello human!
 <pre>You look like a ...
 Chesapeake bay retriever
 But when I look closer ...
-You look more like a  Chihuahua
+You look more like a  Chinese crested
 
 Hello human!
 </pre>
@@ -13817,9 +13827,9 @@ Hello human!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>You look like a ...
-Basenji
+Chow chow
 But when I look closer ...
-You look more like a  Bernese mountain dog
+You look more like a  Icelandic sheepdog
 
 Woff dog!
 </pre>
@@ -13848,7 +13858,7 @@ Woff dog!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>You look like a ...
-Boxer
+Newfoundland
 But when I look closer ...
 You look more like a  Dachshund
 
