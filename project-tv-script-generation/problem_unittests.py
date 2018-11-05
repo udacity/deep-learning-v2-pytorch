@@ -210,8 +210,8 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
     mock_decoder_optimizer = MagicMock(wraps=torch.optim.Adam(mock_decoder.parameters(), lr=learning_rate))
     mock_criterion = MagicMock(wraps=torch.nn.CrossEntropyLoss())
     
-with patch.object(torch.autograd, 'backward', wraps=torch.autograd.backward) as mock_autograd_backward:
-    inp = torch.FloatTensor(np.random.rand(batch_size, input_size))
+    with patch.object(torch.autograd, 'backward', wraps=torch.autograd.backward) as mock_autograd_backward:
+        inp = torch.FloatTensor(np.random.rand(batch_size, input_size))
         target = torch.LongTensor(np.random.randint(output_size, size=batch_size))
         
         hidden = rnn.init_hidden(batch_size)
