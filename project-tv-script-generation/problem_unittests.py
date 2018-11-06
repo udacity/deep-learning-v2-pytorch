@@ -226,4 +226,4 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
     assert mock_decoder_optimizer.step.called, 'Optimization step not performed'
     assert type(loss) == float, 'Wrong return type. Expected {}, got {}'.format(float, type(loss))
     
-_print_success_message()
+    _print_success_message()
