@@ -29,7 +29,7 @@ There are also notebooks used as projects for the Nanodegree program. In the pro
 * [Sentiment Analysis RNN](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/sentiment-rnn): Implement a recurrent neural network that can predict if the text of a moview review is positive or negative.
 * [Attention](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/attention): Implement attention and apply it to annotation vectors.
 
-* **This repo is in development (as of 10/15) and there are more tutorials to come!**
+* **This repo is in development (as of 11/6) and there are more tutorials to come!**
 
 
 ### Projects
