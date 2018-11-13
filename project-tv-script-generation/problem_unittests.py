@@ -59,15 +59,15 @@ def test_create_lookup_tables(create_lookup_tables):
     vocab_to_int_word_set = set(vocab_to_int.keys())
     int_to_vocab_word_set = set(int_to_vocab.values())
 
-assert not (vocab_to_int_word_set - int_to_vocab_word_set),\
+    assert not (vocab_to_int_word_set - int_to_vocab_word_set),\
     'vocab_to_int and int_to_vocab don\'t have the same words.' \
         '{} found in vocab_to_int, but not in int_to_vocab'.format(vocab_to_int_word_set - int_to_vocab_word_set)
     assert not (int_to_vocab_word_set - vocab_to_int_word_set),\
         'vocab_to_int and int_to_vocab don\'t have the same words.' \
         '{} found in int_to_vocab, but not in vocab_to_int'.format(int_to_vocab_word_set - vocab_to_int_word_set)
-
-# Make sure the dicts have the same word ids
-vocab_to_int_word_id_set = set(vocab_to_int.values())
+    
+    # Make sure the dicts have the same word ids
+    vocab_to_int_word_id_set = set(vocab_to_int.values())
     int_to_vocab_word_id_set = set(int_to_vocab.keys())
     
     assert not (vocab_to_int_word_id_set - int_to_vocab_word_id_set),\
@@ -76,13 +76,12 @@ vocab_to_int_word_id_set = set(vocab_to_int.values())
     assert not (int_to_vocab_word_id_set - vocab_to_int_word_id_set),\
         'vocab_to_int and int_to_vocab don\'t contain the same word ids.' \
         '{} found in int_to_vocab, but not in vocab_to_int'.format(int_to_vocab_word_id_set - vocab_to_int_word_id_set)
-
-# Make sure the dicts make the same lookup
-missmatches = [(word, id, id, int_to_vocab[id]) for word, id in vocab_to_int.items() if int_to_vocab[id] != word]
+    
+    # Make sure the dicts make the same lookup
+    missmatches = [(word, id, id, int_to_vocab[id]) for word, id in vocab_to_int.items() if int_to_vocab[id] != word]
     
     assert not missmatches,\
-        'Found {} missmatche(s). First missmatch: vocab_to_int[{}] = {} and int_to_vocab[{}] = {}'.format(
-                                                                                                          len(missmatches),
+        'Found {} missmatche(s). First missmatch: vocab_to_int[{}] = {} and int_to_vocab[{}] = {}'.format(len(missmatches),
                                                                                                           *missmatches[0])
     
     assert len(vocab_to_int) > len(set(test_text))/2,\
@@ -103,24 +102,24 @@ def test_tokenize(token_lookup):
     missing_symbols = symbols - set(token_dict.keys())
     unknown_symbols = set(token_dict.keys()) - symbols
 
-assert not missing_symbols, \
+    assert not missing_symbols, \
     'Missing symbols: {}'.format(missing_symbols)
     assert not unknown_symbols, \
         'Unknown symbols: {}'.format(unknown_symbols)
 
-# Check values type
-bad_value_type = [type(val) for val in token_dict.values() if not isinstance(val, str)]
+    # Check values type
+    bad_value_type = [type(val) for val in token_dict.values() if not isinstance(val, str)]
     
     assert not bad_value_type,\
         'Found token as {} type.'.format(bad_value_type[0])
 
-# Check for spaces
-key_has_spaces = [k for k in token_dict.keys() if ' ' in k]
+    # Check for spaces
+    key_has_spaces = [k for k in token_dict.keys() if ' ' in k]
     val_has_spaces = [val for val in token_dict.values() if ' ' in val]
     
     assert not key_has_spaces,\
         'The key "{}" includes spaces. Remove spaces from keys and values'.format(key_has_spaces[0])
-assert not val_has_spaces,\
+    assert not val_has_spaces,\
     'The value "{}" includes spaces. Remove spaces from keys and values'.format(val_has_spaces[0])
     
     # Check for symbols in values
@@ -130,7 +129,7 @@ assert not val_has_spaces,\
             if symbol in val:
                 symbol_val = (symbol, val)
 
-assert not symbol_val,\
+    assert not symbol_val,\
     'Don\'t use a symbol that will be replaced in your tokens. Found the symbol {} in value {}'.format(*symbol_val)
     
     _print_success_message()
@@ -170,9 +169,9 @@ def test_rnn(RNN, train_on_gpu):
                              'Batch Size': batch_size,
                              'Sequence Length': sequence_length,
                              'Input': b})
-
-# initialization
-correct_hidden_size = (n_layers, batch_size, hidden_dim)
+    
+    # initialization
+    correct_hidden_size = (n_layers, batch_size, hidden_dim)
     assert_condition = hidden[0].size() == correct_hidden_size
     assert_message = 'Wrong hidden state size. Expected type {}. Got type {}'.format(correct_hidden_size, hidden[0].size())
     assert_test.test(assert_condition, assert_message)
@@ -211,8 +210,8 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
     mock_decoder_optimizer = MagicMock(wraps=torch.optim.Adam(mock_decoder.parameters(), lr=learning_rate))
     mock_criterion = MagicMock(wraps=torch.nn.CrossEntropyLoss())
     
-with patch.object(torch.autograd, 'backward', wraps=torch.autograd.backward) as mock_autograd_backward:
-    inp = torch.FloatTensor(np.random.rand(batch_size, input_size))
+    with patch.object(torch.autograd, 'backward', wraps=torch.autograd.backward) as mock_autograd_backward:
+        inp = torch.FloatTensor(np.random.rand(batch_size, input_size))
         target = torch.LongTensor(np.random.randint(output_size, size=batch_size))
         
         hidden = rnn.init_hidden(batch_size)
@@ -225,6 +224,6 @@ with patch.object(torch.autograd, 'backward', wraps=torch.autograd.backward) as 
     assert mock_decoder.forward_called, 'Forward propagation not called.'
     assert mock_autograd_backward.called, 'Backward propagation not called'
     assert mock_decoder_optimizer.step.called, 'Optimization step not performed'
-    assert type(loss) == float, 'Wrong return type. Exptected {}, got {}'.format(float, type(loss))
+    assert type(loss) == float, 'Wrong return type. Expected {}, got {}'.format(float, type(loss))
     
-_print_success_message()
+    _print_success_message()
