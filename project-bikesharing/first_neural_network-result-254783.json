@@ -1,0 +1,132 @@
+{
+    "tests": [
+        {
+            "traceback": "",
+            "rubric_item_id": 5574,
+            "result": ".",
+            "description": "The activation function is a sigmoid"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5578,
+            "result": ".",
+            "description": "The backpropagation implementation is correct"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5575,
+            "result": ".",
+            "description": "The number of epochs is reasonable"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5572,
+            "result": ".",
+            "description": "The forward pass implementation is correct"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5581,
+            "result": ".",
+            "description": "The number of hidden nodes is reasonable"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5582,
+            "result": ".",
+            "description": "The learning_rate is reasonable"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 7964,
+            "result": ".",
+            "description": "The number of output nodes is correct"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 7965,
+            "result": ".",
+            "description": "Produces good results when running the network on full data"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5573,
+            "result": ".",
+            "description": "The run method is correct"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5570,
+            "result": ".",
+            "description": "The weights are updated correctly on training"
+        },
+        {
+            "traceback": "",
+            "rubric_item_id": 5580,
+            "result": ".",
+            "description": "The update_weights implementation is correct"
+        }
+    ],
+    "critiques": {
+        "700": {
+            "general_comment": "Great job on implementing a successful neural network!  As we can see, the model overestimates bike ridership in December because it hasn't had sufficient holiday season training examples.  The predictions generally are quite accurate, though!",
+            "rubric_items": {
+                "5570": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5572": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5573": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5574": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5575": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5578": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5580": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5581": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "5582": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "7964": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                },
+                "7965": {
+                    "autograded": false,
+                    "result": "passed",
+                    "observation": "Correct!"
+                }
+            }
+        }
+    }
+}
