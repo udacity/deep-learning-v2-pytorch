@@ -3,3 +3,4 @@ intro-neural-networks/student-admissions/.ipynb_checkpoints/
 intro-to-pytorch/Cat_Dog_data
 intro-to-pytorch/__pycache__
 convolutional-neural-networks/mnist-mlp/data/
+convolutional-neural-networks/cifar-cnn/data
