@@ -64,7 +64,7 @@ class NeuralNetwork(object):
         # signals into final output layer
         final_inputs = np.dot(hidden_outputs, self.weights_hidden_to_output)
         # signals from final output layer
-        final_outputs = self.activation_function(final_inputs)
+        final_outputs = final_inputs
 
         return final_outputs, hidden_outputs
 
@@ -131,7 +131,7 @@ class NeuralNetwork(object):
         # signals into final output layer
         final_inputs = np.dot(hidden_outputs, self.weights_hidden_to_output)
         # signals from final output layer
-        final_outputs = self.activation_function(final_inputs)
+        final_outputs = final_inputs
         return final_outputs
 
 
