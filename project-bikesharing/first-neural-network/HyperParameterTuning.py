@@ -29,7 +29,7 @@ def objective(params, n_folds=N_FOLDS):
 
         network.train(X, y)
 
-        # Printing out the training progress
+    # Printing out the training progress
     train_loss = MSE(network.run(train_features).T, train_targets["cnt"].values)
     val_loss = MSE(network.run(val_features).T, val_targets["cnt"].values)
     #############
@@ -49,4 +49,3 @@ def objective(params, n_folds=N_FOLDS):
         "train_time": run_time,
         "status": STATUS_OK,
     }
-
