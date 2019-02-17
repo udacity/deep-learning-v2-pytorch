@@ -86,10 +86,10 @@ class NeuralNetwork(object):
         # Output layer error is the difference between desired target and actual output.
         error = y - final_outputs
 
-        # TODO: Calculate the hidden layer's contribution to the error
+        # Calculate the hidden layer's contribution to the error
         hidden_error = np.dot(error, self.weights_hidden_to_output.T)
 
-        # TODO: Backpropagated error terms - Replace these values with your calculations.
+        # Backpropagated error terms - Replace these values with your calculations.
         output_error_term = error
 
         hidden_error_term = hidden_error * hidden_outputs * (1 - hidden_outputs)
@@ -138,7 +138,24 @@ class NeuralNetwork(object):
 #########################################################
 # Set your hyperparameters here
 ##########################################################
-iterations = 100
-learning_rate = 0.1
-hidden_nodes = 2
+iterations = 14800
+learning_rate = 0.25177603192295606
+hidden_nodes = 28
 output_nodes = 1
+
+# Best results for several hyper-parameters
+# +--------------------------------------------------------------------------------------------------------------------------------------------------------+
+# | loss                            | params                                                                                                                         | train_time     |
+# +--------------------------------------------------------------------------------------------------------------------------------------------------------+
+# | 0.142491555168289 | {'hidden_nodes': 28, 'iterations': 14800, 'learning_rate': 0.25177603192295606} | 423.8033424 |
+# | 0.146030811027299 | {'hidden_nodes': 20, 'iterations': 9500, 'learning_rate': 0.27244255300385317} | 243.3451003 |
+# | 0.150713738899908 | {'hidden_nodes': 29, 'iterations': 8600, 'learning_rate': 0.2978565363984502} | 247.3681888 |
+# | 0.150988059709858 | {'hidden_nodes': 28, 'iterations': 14800, 'learning_rate': 0.25177603192295606} | 440.1350425 |
+# | 0.151329791438927 | {'hidden_nodes': 15, 'iterations': 10700, 'learning_rate': 0.15798876504923315} | 254.6575523 |
+# | 0.152535524696922 | {'hidden_nodes': 20, 'iterations': 9500, 'learning_rate': 0.27244255300385317} | 249.4213241 |
+# | 0.155331011477999 | {'hidden_nodes': 15, 'iterations': 12300, 'learning_rate': 0.15179366560262886} | 292.8279305 |
+# | 0.155825899623305 | {'hidden_nodes': 30, 'iterations': 14800, 'learning_rate': 0.22662035053418858} | 434.0398029 |
+# | 0.155910213257180 | {'hidden_nodes': 20, 'iterations': 9500, 'learning_rate': 0.27244255300385317} | 245.4562342 |
+# | 0.155969630283901 | {'hidden_nodes': 22, 'iterations': 10800, 'learning_rate': 0.2992049147740791} | 285.4037101 |
+# | 0.156869800216103 | {'hidden_nodes': 26, 'iterations': 7600, 'learning_rate': 0.24963531261600613} | 215.8153883 |
+# +-------------------------------------------------------------------------------------------------------------------------------------------------------+
