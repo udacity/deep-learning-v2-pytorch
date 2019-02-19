@@ -136,18 +136,17 @@ class NeuralNetwork(object):
 
 
 #########################################################
-# Set your hyperparameters here
+# Set your hyperparameters here (Second least MSE loss from below table)
 ##########################################################
-iterations = 14800
-learning_rate = 0.25177603192295606
-hidden_nodes = 28
+iterations = 10600
+learning_rate = 0.2887998961705719
+hidden_nodes = 10
 output_nodes = 1
 
 # Best results for several hyper-parameters
 # +--------------------------------------------------------------------------------------------------------------------------------------------------------+
-# | loss                            | params                                                                                                                         | train_time     |
+# | loss                            | hyper-parameters                                                                                                         | train_time     |
 # +--------------------------------------------------------------------------------------------------------------------------------------------------------+
-# loss	params	train_time
 # | 0.141505344514840   |   {'hidden_nodes': 28, 'iterations': 14800, 'learning_rate': 0.25177603192295606} | 488.2881553 |
 # | 0.142963746497879   |   {'hidden_nodes': 10, 'iterations': 10600, 'learning_rate': 0.2887998961705719} | 250.2367154 |
 # | 0.144113653142509   |   {'hidden_nodes': 15, 'iterations': 13100, 'learning_rate': 0.2973050618717538} | 456.0543504 |

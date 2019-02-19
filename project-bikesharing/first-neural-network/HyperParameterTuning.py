@@ -4,7 +4,7 @@ from timeit import default_timer as timer
 import sys
 
 
-def objective(params, n_folds=N_FOLDS):
+def objective(params):
     """Objective function for Gradient Boosting Machine Hyperparameter Optimization"""
 
     # Keep track of evals
