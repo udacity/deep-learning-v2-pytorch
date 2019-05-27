@@ -1,4 +1,4 @@
-opencv-python==3.2.0.6
+opencv-python
 jupyter
 matplotlib
 pandas
