@@ -154,7 +154,6 @@ def test_rnn(RNN, train_on_gpu):
     b = torch.from_numpy(a)
     hidden = rnn.init_hidden(batch_size)
     
-    
     if(train_on_gpu):
         rnn.cuda()
         b = b.cuda()
@@ -172,13 +171,27 @@ def test_rnn(RNN, train_on_gpu):
     
     # initialization
     correct_hidden_size = (n_layers, batch_size, hidden_dim)
-    assert_condition = hidden[0].size() == correct_hidden_size
+    
+    if type(hidden) == tuple:
+        # LSTM
+        assert_condition = hidden[0].size() == correct_hidden_size
+    else:
+        # GRU
+        assert_condition = hidden.size() == correct_hidden_size
+
     assert_message = 'Wrong hidden state size. Expected type {}. Got type {}'.format(correct_hidden_size, hidden[0].size())
     assert_test.test(assert_condition, assert_message)
     
     # output of rnn
     correct_hidden_size = (n_layers, batch_size, hidden_dim)
-    assert_condition = hidden_out[0].size() == correct_hidden_size
+    
+    if type(hidden) == tuple:
+        # LSTM        
+        assert_condition = hidden_out[0].size() == correct_hidden_size
+    else:
+        # GRU
+        assert_condition = hidden_out.size() == correct_hidden_size
+
     assert_message = 'Wrong hidden state size. Expected type {}. Got type {}'.format(correct_hidden_size, hidden_out[0].size())
     assert_test.test(assert_condition, assert_message)
     
@@ -218,7 +231,12 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
         
         loss, hidden_out = forward_back_prop(mock_decoder, mock_decoder_optimizer, mock_criterion, inp, target, hidden)
     
-    assert (hidden_out[0][0]==hidden[0][0]).sum()==batch_size*hidden_dim, 'Returned hidden state is the incorrect size.'
+    if type(hidden_out) == tuple:
+        # LSTM
+        assert (hidden_out[0][0]==hidden[0][0]).sum()==batch_size*hidden_dim, 'Returned hidden state is the incorrect size.'
+    else:
+        # GRU
+        assert (hidden_out[0]==hidden[0]).sum()==batch_size*hidden_dim, 'Returned hidden state is the incorrect size.'
     
     assert mock_decoder.zero_grad.called or mock_decoder_optimizer.zero_grad.called, 'Didn\'t set the gradients to 0.'
     assert mock_decoder.forward_called, 'Forward propagation not called.'
