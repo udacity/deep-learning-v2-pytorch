@@ -116,16 +116,16 @@ git clone https://github.com/udacity/deep-learning-v2-pytorch.git
 cd deep-learning-v2-pytorch
 ```
 
-2. Create (and activate) a new environment, named `deep-learning` with Python 3.6. If prompted to proceed with the install `(Proceed [y]/n)` type y.
+2. Create (and activate) a new environment, named `deep-learning` with Python 3.7. If prompted to proceed with the install `(Proceed [y]/n)` type y.
 
 	- __Linux__ or __Mac__: 
 	```
-	conda create -n deep-learning python=3.6
+	conda create -n deep-learning python=3.7
 	source activate deep-learning
 	```
 	- __Windows__: 
 	```
-	conda create --name deep-learning python=3.6
+	conda create --name deep-learning python=3.7
 	activate deep-learning
 	```
 	
