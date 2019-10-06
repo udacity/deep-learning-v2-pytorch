@@ -40,7 +40,7 @@ Associated tasks
 =========================================
 
 	- Regression: 
-		Predication of bike rental count hourly or daily based on the environmental and seasonal settings.
+		Prediction of bike rental count hourly or daily based on the environmental and seasonal settings.
 	
 	- Event and Anomaly Detection:  
 		Count of rented bikes are also correlated to some events in the town which easily are traceable via search engines.
