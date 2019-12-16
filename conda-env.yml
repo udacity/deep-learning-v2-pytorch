@@ -1,0 +1,21 @@
+name: udacity
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.7
+  - opencv
+  - numpy
+  - pandas
+  - scipy
+  - h5py
+  - bokeh
+  - pickleshare
+  - scikit-learn
+  - scikit-image
+  - matplotlib
+  - seaborn
+  - tqdm
+  - pillow
+  - ipykernel
+  - jupyter
