@@ -19,3 +19,4 @@ dependencies:
   - pillow
   - ipykernel
   - jupyter
+  - spyder
