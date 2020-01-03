@@ -1,1 +1,9 @@
 .ipynb_checkpoints
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# input data for models
+Cat_Dog_data
