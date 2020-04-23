@@ -3,8 +3,8 @@ import subprocess as sp
 from udacity_pa import udacity
 
 nanodegree = 'nd101'
-projects = ['first_neural_network']
-filenames = ['my_answers.py', 'Your_first_neural_network.ipynb']
+projects = ['Predicting_Bike-Sharing_Patterns']
+filenames = ['my_answers.py', 'Predicting_bike_sharing_data.ipynb']
 
 def submit(args):
 
