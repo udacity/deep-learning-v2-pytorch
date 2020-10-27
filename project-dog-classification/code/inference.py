@@ -1,24 +1,31 @@
-import os
-import torch
-import torch.nn.parallel
-import torch.optim
-import torch.utils.data
-import torch.utils.data.distributed
-import torchvision.transforms as transforms
-from PIL import Image
 import io
 import json
+import logging
+import os
 import pickle
 
+import numpy as np
+import torch
+import torchvision.transforms as transforms
+
+from PIL import Image  # Training container doesn't have this package
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
 def model_fn(model_dir):
-    model_path = os.path.join(model_dir, 'model_transfer.pt')
+    
     with torch.neo.config(model_dir=model_dir, neo_runtime=True):
-        model = torch.jit.load(model_path)
+        
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        
+        # The compiled model is saved as "compiled.pt"
+        model = torch.jit.load(os.path.join(model_dir, 'compiled.pt'))
         model = model.to(device)
 
         # We recommend that you run warm-up inference during model load
         sample_input_path = os.path.join(model_dir, 'sample_input.pkl')
+        
         with open(sample_input_path, 'rb') as input_file:
             model_input = pickle.load(input_file)
         if torch.is_tensor(model_input):
@@ -33,23 +40,39 @@ def model_fn(model_dir):
 
         return model
 
-def transform_fn(model, request_body, request_content_type,
-                 response_content_type):
+def transform_fn(model, payload, request_content_type, response_content_type):
     
-    decoded = Image.open(io.BytesIO(request_body))
+    logger.info('Invoking user-defined transform function')
+
+    if request_content_type != 'application/octet-stream':
+        raise RuntimeError(
+            'Content type must be application/octet-stream. Provided: {0}'.format(request_content_type))
+
+    # preprocess
+    decoded = Image.open(io.BytesIO(payload))
     preprocess = transforms.Compose([
-        transforms.Resize(224),
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(
-            mean=[0.485, 0.456, 0.406],
-            std=[0.229, 0.224, 0.225]),
+            mean=[
+                0.485, 0.456, 0.406], std=[
+                0.229, 0.224, 0.225]),
     ])
     normalized = preprocess(decoded)
     batchified = normalized.unsqueeze(0)
     
+    # predict
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     batchified = batchified.to(device)
-    
-    output = model.forward(batchified)
+    result = model.forward(batchified)
 
-    return json.dumps(output.cpu().numpy().tolist()), response_content_type
+    # Softmax (assumes batch size 1)
+    result = np.squeeze(result.cpu().detach().numpy())
+    result_exp = np.exp(result - np.max(result))
+    result = result_exp / np.sum(result_exp)
+
+    response_body = json.dumps(result.tolist())
+    content_type = 'application/json'
+
+    return response_body, content_type
