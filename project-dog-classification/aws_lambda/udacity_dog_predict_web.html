@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sentiment Analysis Web App</title>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script>
+          "use strict";
+          function submitForm(oFormElement) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onload = function() {
+                var result = xhr.responseText;
+                var resultElement = document.getElementById('result');
+
+                resultElement.innerHTML = JSON.stringify(JSON.parse(result), null, 2);
+            }
+
+            xhr.open(oFormElement.method, oFormElement.action, true);
+
+            var image = document.getElementById('image_preview');
+            //var encoded_img = imgToBase64(image);
+            var encoded_img = image.src.replace(/^data:image.+;base64,/, '');
+
+            console.log(encoded_img);
+
+            xhr.send(encoded_img);
+            return false;
+          }
+          function imgToBase64(img) {
+            var canvas = document.createElement('canvas'),
+              ctx = canvas.getContext('2d');
+
+            canvas.height = img.naturalHeight;
+            canvas.width = img.naturalWidth;
+            ctx.drawImage(img, 0, 0);
+
+            var uri = canvas.toDataURL('image/png'),
+            b64 = uri.replace(/^data:image.+;base64,/, '');
+
+            return b64;
+          }
+          function updateImgTag() {
+            var input = document.getElementById("img");
+            var fReader = new FileReader();
+
+            fReader.readAsDataURL(input.files[0]);
+            fReader.onloadend = function(event){
+              var img = document.getElementById("image_preview");
+              img.src = event.target.result;
+            }
+          }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Predict a dog's breed!</h1>
+            <form method="POST" onsubmit="return submitForm(this);" action="">
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*" onchange="updateImgTag();">
+                    <br>
+                    <img id="image_preview" scr="" width="300">
+                    <br><br>
+                    <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <br>
+            <label for="result">Prediction Result:</label>
+            <pre id="result"></pre>
+        </div>
+    </body>
+</html>
