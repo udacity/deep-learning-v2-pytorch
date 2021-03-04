@@ -92,9 +92,9 @@ Using Anaconda consists of the following:
 
 **Install** [miniconda](http://conda.pydata.org/miniconda.html) on your machine. Detailed instructions:
 
-- **Linux:** http://conda.pydata.org/docs/install/quick.html#linux-miniconda-install
-- **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
-- **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
+- **Linux:** https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
+- **Mac:** https://conda.io/projects/conda/en/latest/user-guide/install/macos.html
+- **Windows:** https://conda.io/projects/conda/en/latest/user-guide/install/windows.html
 
 ## 2. Create and Activate the Environment
 
