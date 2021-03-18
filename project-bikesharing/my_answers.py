@@ -98,6 +98,7 @@ class NeuralNetwork(object):
         
         hidden_error_term = None
         
+        # TODO: Add Weight step (input to hidden) and Weight step (hidden to output).
         # Weight step (input to hidden)
         delta_weights_i_h += None
         # Weight step (hidden to output)
