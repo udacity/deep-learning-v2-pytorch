@@ -115,6 +115,8 @@ class NeuralNetwork(object):
             n_records: number of records
 
         '''
+        
+        # TODO: Update the weights with gradient descent step
         self.weights_hidden_to_output += None # update hidden-to-output weights with gradient descent step
         self.weights_input_to_hidden += None # update input-to-hidden weights with gradient descent step
 
