@@ -1,1 +1,0 @@
-An empty samples directory for saving generated samples during training.
