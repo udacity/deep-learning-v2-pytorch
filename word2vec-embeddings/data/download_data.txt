@@ -1,1 +1,0 @@
-Download the text8.zip file as per the instructions in the exercise notebooks. Extract that data in this directory so that you get data/text8.
