@@ -13,3 +13,5 @@ h5py
 ipykernel
 bokeh
 pickleshare
+torch
+torchvision
