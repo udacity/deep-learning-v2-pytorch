@@ -45,6 +45,7 @@ def _get_loss_acc(model, train_loader, valid_loader):
     # after training for 2 epochs, check validation accuracy 
     correct = 0
     total = 0
+    model.eval()
     for data, target in valid_loader:
         # forward pass: compute predicted outputs by passing inputs to the model
         output = model(data)
