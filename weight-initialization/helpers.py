@@ -28,6 +28,7 @@ def _get_loss_acc(model, train_loader, valid_loader):
         ###################
         # train the model #
         ###################
+        model.train()
         for data, target in train_loader:
             # clear the gradients of all optimized variables
             optimizer.zero_grad()
