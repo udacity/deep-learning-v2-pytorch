@@ -10,47 +10,62 @@ There are also notebooks used as projects for the Nanodegree program. In the pro
 
 ### Introduction to Neural Networks
 
-* [Introduction to Neural Networks](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/intro-neural-networks): Learn how to implement gradient descent and apply it to predicting patterns in student admissions data.
-* [Sentiment Analysis with NumPy](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/sentiment-analysis-network): [Andrew Trask](http://iamtrask.github.io/) leads you through building a sentiment analysis model, predicting if some text is positive or negative.
-* [Introduction to PyTorch](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/intro-to-pytorch): Learn how to build neural networks in PyTorch and use pre-trained networks for state-of-the-art image classifiers.
+* [Introduction to Neural Networks](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/1-Introduction%20to%20Neural%20Networks/intro-neural-networks): Learn how to implement gradient descent and apply it to predicting patterns in student admissions data.
+
+* [Introduction to PyTorch](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/1-Introduction%20to%20Neural%20Networks/intro-to-pytorch): Learn how to build neural networks in PyTorch and use pre-trained networks for state-of-the-art image classifiers.
+
+* [Project: Predicting Bike-Sharing Patterns](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/5-Projects/project-bikesharing): Apply your neural network knowledge by implementing a complete neural network in NumPy to predict bike rental patterns. This hands-on project will reinforce your understanding of neural network fundamentals.
 
 ### Convolutional Neural Networks
 
-* [Convolutional Neural Networks](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/convolutional-neural-networks): Visualize the output of layers that make up a CNN. Learn how to define and train a CNN for classifying [MNIST data](https://en.wikipedia.org/wiki/MNIST_database), a handwritten digit database that is notorious in the fields of machine and deep learning. Also, define and train a CNN for classifying images in the [CIFAR10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html).
-* [Transfer Learning](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/transfer-learning). In practice, most people don't train their own networks on huge datasets; they use **pre-trained** networks such as VGGnet. Here you'll use VGGnet to help classify images of flowers without training an end-to-end network from scratch.
-* [Weight Initialization](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/weight-initialization): Explore how initializing network weights affects performance.
-* [Autoencoders](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/autoencoder): Build models for image compression and de-noising, using feedforward and convolutional networks in PyTorch.
-* [Style Transfer](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/style-transfer): Extract style and content features from images, using a pre-trained network. Implement style transfer according to the paper, [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) by Gatys et. al. Define appropriate losses for iteratively creating a target, style-transferred image of your own design!
+* [Convolutional Neural Networks](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/2-Convolutional%20Neural%20Networks/convolutional-neural-networks): Start with CNN fundamentals. First understand convolution layers through visualization, then work with multilayer perceptrons on the [MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database), and finally learn how to build CNNs for the more complex [CIFAR10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html).
+
+* [Weight Initialization](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/2-Convolutional%20Neural%20Networks/weight-initialization): Dive deep into neural network weight initialization techniques and learn how different initialization methods affect model training and performance.
+
+* [Batch Normalization](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/4-Generative%20Adversarial%20Networks/batch-norm): Learn this crucial deep learning technique that significantly improves network training speed and stability - a key technology for building deep CNNs.
+
+* [Transfer Learning](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/2-Convolutional%20Neural%20Networks/transfer-learning): Learn how to leverage pre-trained models like VGGnet to solve real-world problems. This approach enables building high-performance image classifiers with limited data and computational resources.
+
+* [Autoencoders](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/2-Convolutional%20Neural%20Networks/autoencoder): Explore a key CNN application - autoencoders. Learn how to build autoencoders using feedforward networks and CNNs for image compression and denoising.
+
+* [Style Transfer](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/2-Convolutional%20Neural%20Networks/style-transfer): Study advanced CNN applications. Based on the paper [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf), implement image style transfer by applying various CNN concepts.
+
+* [Project: Dog Breed Classifier](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/5-Projects/project-dog-classification): Put your CNN knowledge to practice by building an end-to-end image classification pipeline. Create a CNN with PyTorch to classify dog breeds, and even detect dogs in images of humans. This project combines transfer learning, data preprocessing, and model deployment skills.
 
 ### Recurrent Neural Networks
 
-* [Intro to Recurrent Networks (Time series & Character-level RNN)](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/recurrent-neural-networks): Recurrent neural networks are able to use information about the sequence of data, such as the sequence of characters in text; learn how to implement these in PyTorch for a variety of tasks.
-* [Embeddings (Word2Vec)](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/word2vec-embeddings): Implement the Word2Vec model to find semantic representations of words for use in natural language processing.
-* [Sentiment Analysis RNN](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/sentiment-rnn): Implement a recurrent neural network that can predict if the text of a moview review is positive or negative.
-* [Attention](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/attention): Implement attention and apply it to annotation vectors.
+* [Recurrent Neural Networks](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/3-Recurrent%20Neural%20Networks/recurrent-neural-networks): Begin with fundamental RNNs. First understand RNN principles through time series prediction tasks, then learn character-level RNN implementation. This will help you deeply understand how RNNs process sequential data.
+
+* [Sentiment Analysis with NumPy](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/3-Recurrent%20Neural%20Networks/sentiment-analysis-network): (Optional) For those interested in deeper understanding, follow [Andrew Trask](http://iamtrask.github.io/)'s guide to implement sentiment analysis from scratch using NumPy. This hands-on exercise provides valuable insights into the inner workings of neural networks and text processing fundamentals.
+
+* [Embeddings (Word2Vec)](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/3-Recurrent%20Neural%20Networks/word2vec-embeddings): Learn word embedding techniques and master how to convert text into numerical representations that neural networks can process. This is a crucial foundation for natural language processing and key to building efficient text processing models.
+
+* [Sentiment Analysis RNN](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/3-Recurrent%20Neural%20Networks/sentiment-rnn): Combine RNN and word embedding knowledge to build a more sophisticated sentiment analysis model. This project will help you understand how to apply previously learned concepts to practical problems.
+
+* [Attention](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/3-Recurrent%20Neural%20Networks/attention): Study the attention mechanism, a crucial concept in modern deep learning. Understand how to use attention to enhance model performance, laying the groundwork for learning advanced models like Transformers.
+
+* [Project: TV Script Generation](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/5-Projects/project-tv-script-generation): Apply your RNN expertise to build a model that can generate TV script dialogue. Train your network on existing scripts from the TV show Seinfeld and watch it generate new, original dialogue. This project demonstrates the practical application of RNNs in creative text generation.
 
 ### Generative Adversarial Networks
 
-* [Generative Adversarial Network on MNIST](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/gan-mnist): Train a simple generative adversarial network on the MNIST dataset.
-* [Batch Normalization](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/batch-norm): Learn how to improve training rates and network stability with batch normalizations.
-* [Deep Convolutional GAN (DCGAN)](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/dcgan-svhn): Implement a DCGAN to generate new images based on the Street View House Numbers (SVHN) dataset.
-* [CycleGAN](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/cycle-gan): Implement a CycleGAN that is designed to learn from unpaired and unlabeled data; use trained generators to transform images from summer to winter and vice versa.
+* [Generative Adversarial Network on MNIST](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/4-Generative%20Adversarial%20Networks/gan-mnist): Start with basic GANs using the simple MNIST dataset to understand core GAN concepts: the adversarial training process between generator and discriminator. This introductory project will help build your foundation in GANs.
+
+* [Deep Convolutional GAN (DCGAN)](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/4-Generative%20Adversarial%20Networks/dcgan-svhn): Learn how to apply CNNs to GANs. Using the more complex Street View House Numbers (SVHN) dataset, implement DCGAN to generate more realistic images. This project combines knowledge from both CNNs and GANs.
+
+* [CycleGAN](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/4-Generative%20Adversarial%20Networks/cycle-gan): Study advanced GAN applications. CycleGAN can learn image transformations (like summer to winter) without paired data. This project demonstrates the powerful capabilities of GANs in practical applications.
+
+* [Project: Face Generation](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/5-Projects/project-face-generation): Put your GAN knowledge into practice by building a DCGAN to generate realistic human faces. Using the CelebA dataset, you'll implement and train a generative model that can create entirely new, realistic faces. This project combines your understanding of CNNs and GANs in a creative application.
 
 ### Deploying a Model (with AWS SageMaker)
 
 * [All exercise and project notebooks](https://github.com/udacity/sagemaker-deployment) for the lessons on model deployment can be found in the linked, Github repo. Learn to deploy pre-trained models using AWS SageMaker.
 
-### Projects
 
-* [Predicting Bike-Sharing Patterns](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/project-bikesharing): Implement a neural network in NumPy to predict bike rentals.
-* [Dog Breed Classifier](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/project-dog-classification): Build a convolutional neural network with PyTorch to classify any image (even an image of a face) as a specific dog breed.
-* [TV Script Generation](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/project-tv-script-generation): Train a recurrent neural network to generate scripts in the style of dialogue from Seinfeld.
-* [Face Generation](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/project-face-generation): Use a DCGAN on the CelebA dataset to generate images of new and realistic human faces.
 
 ### Elective Material
 
-* [Intro to TensorFlow](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/tensorflow/intro-to-tensorflow): Starting building neural networks with TensorFlow.
-* [Keras](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/keras): Learn to build neural networks and convolutional neural networks with Keras.
+* [Intro to TensorFlow](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/6-Elective%20Material/tensorflow/intro-to-tensorflow): Starting building neural networks with TensorFlow.
+* [Keras](https://github.com/Hebe-330/deep-learning-v2-pytorch/tree/master/6-Elective%20Material/keras): Learn to build neural networks and convolutional neural networks with Keras.
 
 ---
 
@@ -112,7 +127,7 @@ If you'd like to learn more about version control and using `git` from the comma
 
 1. Clone the repository, and navigate to the downloaded folder. This may take a minute or two to clone due to the included image data.
 ```
-git clone https://github.com/udacity/deep-learning-v2-pytorch.git
+git clone https://github.com/Hebe-330/deep-learning-v2-pytorch.git
 cd deep-learning-v2-pytorch
 ```
 
